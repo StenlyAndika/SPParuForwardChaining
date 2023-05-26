@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="blur" prefHeight="639.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerInformasi">
+   <children>
+      <Pane layoutY="9.0" prefHeight="54.0" prefWidth="994.0" style="-fx-background-color: #438ae1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="61.0" layoutY="27.0" text="Sistem Pakar Diagnosis Penyakit Paru - Paru" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="-5.0" text="Expert System" textAlignment="CENTER" textFill="#fffefe">
+               <font>
+                  <Font name="Cambria" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="830.0" layoutY="9.0" text="INFORMASI" textAlignment="CENTER" textFill="#fffefe">
+               <font>
+                  <Font name="Cambria Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="70.0" prefHeight="338.0" prefWidth="994.0" style="-fx-border-color: #438ae1;" stylesheets="@../styles/Css-Field-Button.css" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <Label layoutX="9.0" layoutY="12.0" text="Informasi Sistem Pakar" textFill="#f80505">
+               <font>
+                  <Font name="Cambria" size="21.0" />
+               </font>
+            </Label>
+            <Accordion layoutX="8.0" layoutY="38.0" prefHeight="128.0" prefWidth="202.0">
+              <panes>
+                <TitledPane animated="false" text="Tutorial Penggunaan">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="54.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXButton fx:id="tdiagnosa" layoutY="1.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #438ae1;" text="Tutorial Diagnosa" textFill="#f8f7f7">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></JFXButton>
+                                    <JFXButton fx:id="tadmin" layoutY="27.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #438ae1;" text="Tutorial Mode Admin" textFill="#f8f7f7">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></JFXButton>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Informasi">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="54.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXButton fx:id="isistem" layoutY="27.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #438ae1;" text="Informasi Sistem" textFill="#f5f4f4">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></JFXButton>
+                                    <JFXButton fx:id="ipenyakit" layoutY="1.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #438ae1;" text="Informasi Penyakit" textFill="#f5f4f4">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></JFXButton>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="About">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="54.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXButton fx:id="brateus" layoutY="1.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #438ae1;" text="Nilai Kami" textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></JFXButton>
+                                    <JFXButton fx:id="babout" layoutY="27.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #438ae1;" text="Tentang Kami" textFill="#fcfcfc">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></JFXButton>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+            <TextArea fx:id="hasiloutput" editable="false" layoutX="219.0" layoutY="38.0" prefHeight="450.0" prefWidth="762.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="416.0" prefHeight="54.0" prefWidth="994.0" style="-fx-background-color: #438ae1;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="61.0" layoutY="27.0" text="Sistem Pakar Diagnosis Penyakit Paru - Paru" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="-5.0" text="Expert System" textAlignment="CENTER" textFill="#fffefe">
+               <font>
+                  <Font name="Cambria" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="830.0" layoutY="9.0" text="INFORMASI" textAlignment="CENTER" textFill="#fffefe">
+               <font>
+                  <Font name="Cambria Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="639.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerHome">
+   <children>
+      <Pane layoutX="1.0" layoutY="73.0" prefHeight="493.0" prefWidth="994.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0">
+         <children>
+            <Label layoutX="87.0" layoutY="13.0" text="Sistem Pakar" textAlignment="CENTER" textFill="#438ae1">
+               <font>
+                  <Font name="Cambria" size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="178.0" layoutY="62.0" text="Expert System" textAlignment="CENTER" textFill="#438ae1">
+               <font>
+                  <Font name="Cambria Italic" size="23.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="158.0" fitWidth="176.0" layoutX="41.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8_Lungs_100px.png" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_CENTER" layoutX="214.0" layoutY="109.0" prefHeight="100.0" prefWidth="740.0" text="Paru-Paru adalah organ pada sistem pernapasan (respirasi) dan berhubungan dengan sistem peredaran darah (sirkulasi) vertebrata yang bernapas dengan udara. Fungsinya adalah menukar oksigen dari udara dengan karbondioksida dari darah. Prosesnya disebut &quot;pernapasan eksternal&quot; atau bernapas. (id.wikipedia.org/wiki/paru-paru)" textFill="#438ae1" wrapText="true">
+               <font>
+                  <Font name="Cambria" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="37.0" layoutY="217.0" prefHeight="146.0" prefWidth="916.0" text="Paru-paru sangat rentan terkena penyakit, terlebih lagi akibat dari polusi, asap rokok, debu, dan lain sebagainya. Maka penanganan yang cepat sangat dibutuhkan untuk menangani terjadinya kerusakan para paru-paru. Ada banyak jenis penyakit paru-paru pada umumnya, tetapi tidak semua penyakit banyak dialami oleh masyarakat. Berdasarkan data dari Rekam Medis RSU Mayjen H.A Thalib terdapat empat penyakit paru-paru yang sering terjadi pada masyarakat kerinci yaitu : Tuberkulosis Paru (TBC), Asma Bronkial, Pneunomia, Dan Penyakit Paru Obstruktif Kronis (PPOK)." textFill="#438ae1" wrapText="true">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="37.0" layoutY="334.0" prefHeight="146.0" prefWidth="916.0" text="Sistem Pakar ini dibuat khusus untuk mendiagnosa penyakit paru-paru. Hasil sistem pakar tidak selalu akurat, maka dari itu sistem ini hanya akan digunakan sebagai pendukung bagi seorang pakar, tidak hanya pakar sistem ini juga boleh digunakan oleh non pakar apabila telah mendapatkan izin dari pakar itu sendiri. Sistem ini dimodifikasi dengan Live Rules Editor yang mana seorang pakar bisa menambah, merubah, bahkan menghapus rule dari interface program tanpa harus berhubungan dengan source code. dengan demikian maka diharapkan sistem ini dapat menjadi sistem pakar yang cukup akurat untuk kedepannya." textFill="#438ae1" wrapText="true">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="723.0" layoutY="453.0" prefHeight="24.0" prefWidth="209.0" text="Stenly Andika, Juli 2018" textAlignment="CENTER" textFill="#438ae1">
+               <font>
+                  <Font name="Cambria" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="326.0" layoutY="30.0" text="Lung Diagnostics" textAlignment="CENTER" textFill="#438ae1">
+               <font>
+                  <Font name="Cambria Italic" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="325.0" layoutY="61.0" text="Diagnosis Penyakit Paru-Paru" textAlignment="CENTER" textFill="#438ae1">
+               <font>
+                  <Font name="Cambria" size="31.0" />
+               </font>
+            </Label>
+            <Line endY="-50.0" layoutX="321.0" layoutY="82.0" startY="8.5" stroke="#f80000" strokeType="OUTSIDE" />
+            <Line endX="526.0" fill="#f8f6f6" layoutX="190.0" layoutY="63.0" startX="-100.0" stroke="#f80000" strokeType="OUTSIDE" />
+         </children>
+      </Pane>
+      <Pane prefHeight="54.0" prefWidth="994.0" style="-fx-background-color: #438ae1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label layoutX="61.0" layoutY="27.0" text="Sistem Pakar Diagnosis Penyakit Paru - Paru" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="-5.0" text="Expert System" textAlignment="CENTER" textFill="#fffefe">
+               <font>
+                  <Font name="Cambria" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="900.0" layoutY="9.0" text="HOME" textAlignment="CENTER" textFill="#fffefe">
+               <font>
+                  <Font name="Cambria Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane prefHeight="54.0" prefWidth="994.0" style="-fx-background-color: #438ae1;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="61.0" layoutY="27.0" text="Sistem Pakar Diagnosis Penyakit Paru - Paru" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="-5.0" text="Expert System" textAlignment="CENTER" textFill="#fffefe">
+               <font>
+                  <Font name="Cambria" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="902.0" layoutY="9.0" text="HOME" textAlignment="CENTER" textFill="#fffefe">
+               <font>
+                  <Font name="Cambria Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

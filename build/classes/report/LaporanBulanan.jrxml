@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c775733c-85c7-4b10-a899-70f2ee6270c3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="mnt" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="yrs" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     diagnosa.`idrekam` AS diagnosa_idrekam,
+     diagnosa.`idpas` AS diagnosa_idpas,
+     diagnosa.`tgl` AS diagnosa_tgl,
+     diagnosa.`gejala` AS diagnosa_gejala,
+     diagnosa.`penyakit` AS diagnosa_penyakit,
+     diagnosa.`jml_diagnosis` AS diagnosa_jml_diagnosis,
+     pasien.`idpas` AS pasien_idpas,
+     pasien.`nama` AS pasien_nama,
+     pasien.`alamat` AS pasien_alamat,
+     pasien.`jekel` AS pasien_jekel,
+     pasien.`umur` AS pasien_umur
+FROM
+     `pasien` pasien INNER JOIN `diagnosa` diagnosa ON pasien.`idpas` = diagnosa.`idpas`
+WHERE
+      month(diagnosa.`tgl`) LIKE '%$P!{mnt}%'
+AND
+      year(diagnosa.`tgl`) LIKE '%$P!{yrs}%']]>
+	</queryString>
+	<field name="diagnosa_idrekam" class="java.lang.String"/>
+	<field name="diagnosa_idpas" class="java.lang.String"/>
+	<field name="diagnosa_tgl" class="java.sql.Date"/>
+	<field name="diagnosa_gejala" class="java.lang.String"/>
+	<field name="diagnosa_penyakit" class="java.lang.String"/>
+	<field name="diagnosa_jml_diagnosis" class="java.lang.Integer"/>
+	<field name="pasien_idpas" class="java.lang.String"/>
+	<field name="pasien_nama" class="java.lang.String"/>
+	<field name="pasien_alamat" class="java.lang.String"/>
+	<field name="pasien_jekel" class="java.lang.String"/>
+	<field name="pasien_umur" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="802" height="20" uuid="2f4a33ee-3318-4884-97ec-d3899e6bc8dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REKAP DATA LAPORAN BULANAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="35" width="802" height="20" uuid="72ce4143-20a4-4ac3-8c3b-21a07dbf0bc1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PENDERITA PENYAKIT PARU-PARU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="70" width="80" height="19" uuid="9d2220b3-2200-4672-93c2-7cc29121a4e7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<text><![CDATA[Bulan : ]]></text>
+			</staticText>
+			<textField pattern="MMM yyyy">
+				<reportElement x="50" y="69" width="100" height="20" uuid="c41d6aa8-fce5-4458-87cf-12a79e378806"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diagnosa_tgl}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="2" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="11" y="0" width="84" height="30" uuid="38279f87-5334-4d8c-9838-fc2d22eec831"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="95" y="0" width="144" height="30" uuid="b5132df6-b210-4ab8-90b3-5fd3de7dd491"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="239" y="0" width="46" height="30" uuid="208d2af5-ffc6-47f8-b06a-b9aebbac8f64"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="285" y="0" width="43" height="30" uuid="0d9de233-9783-4f74-9b1f-64616b1fb090"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="328" y="0" width="153" height="30" uuid="60cfe5a3-8b7a-46fc-9369-65fa04f3cd72"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="481" y="0" width="104" height="30" uuid="3f0fb0ad-67a9-409c-bc7a-af45cd3c126c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="585" y="0" width="210" height="30" uuid="b9547db7-ceca-40d1-b633-ae4611f00e24"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="0" width="80" height="30" uuid="6784ac60-1fd6-42ac-92a6-8a4162df65a8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<text><![CDATA[ID Diagnosis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="0" width="142" height="30" uuid="c73b7cbe-f3e9-4f44-bccd-2eebe020bda2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Pasien]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="241" y="0" width="43" height="30" uuid="46b13995-9a61-4868-b41b-ccd222b6b6be"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="0" width="39" height="30" uuid="9221b29d-a4dc-4f45-9c99-f9265605ab94"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<text><![CDATA[Umur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="484" y="0" width="100" height="30" uuid="40522609-7f53-4a2f-a5e0-0b3a47278607"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<text><![CDATA[Tanggal Diagnosis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="588" y="0" width="205" height="30" uuid="0f0fd6ed-4320-4495-babb-89d38e1c3db0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<text><![CDATA[Penyakit Yang Diderita]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="332" y="0" width="148" height="30" uuid="a5266a3b-709c-4c97-916a-84c7117465fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<text><![CDATA[Alamat Pasien]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="239" y="0" width="46" height="20" uuid="b66fbe71-b783-491f-98ba-eacfe5dde192"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="285" y="0" width="43" height="20" uuid="44bffa19-4942-4670-a428-177b6980e10d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="328" y="0" width="153" height="20" uuid="5e6f7029-d3fa-4194-baa9-1998c6ad2ce8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="481" y="0" width="104" height="20" uuid="f3228cf9-c430-47a5-8cdb-3523512e7650"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="585" y="0" width="210" height="20" uuid="a85012cb-906a-4b55-a58a-4ce78c3e6c2c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="11" y="0" width="84" height="20" uuid="595e9f2d-1a68-4600-8b22-f4492466ebab"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="95" y="0" width="144" height="20" uuid="9e3116fa-e2f0-4620-9537-2b09aacf2567"/>
+			</rectangle>
+			<textField>
+				<reportElement x="13" y="0" width="80" height="20" uuid="84d3093b-1536-4644-bd62-0e25531f0a34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diagnosa_idrekam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="0" width="142" height="20" uuid="82f11b2e-3bd2-401c-a895-f23b698aaef8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pasien_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="241" y="0" width="43" height="20" uuid="0370b7b1-592d-43da-9dd1-68f3c9cf7926"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pasien_jekel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="0" width="39" height="20" uuid="3f0321e4-0ff4-415d-bff4-c8a2c3622647"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pasien_umur}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd MMM yyyy">
+				<reportElement x="484" y="0" width="100" height="20" uuid="82ac1596-ebd8-458c-9fc0-9f3c3060fce2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diagnosa_tgl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="588" y="0" width="205" height="20" uuid="7210d3d8-90be-4f6f-a6be-d685feb5e616"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diagnosa_penyakit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="332" y="0" width="148" height="20" uuid="e5aaaf86-a564-4857-8fc2-fce6fbb9fae8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pasien_alamat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="108" splitType="Stretch">
+			<staticText>
+				<reportElement x="610" y="2" width="179" height="15" uuid="9341d7c1-f0b1-473a-9966-962eb355cc0c"/>
+				<textElement>
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<text><![CDATA[Sungai Penuh,		    20]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="16" width="179" height="15" uuid="0bbc00cd-91c0-4618-b3e0-c874f5a32309"/>
+				<textElement>
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<text><![CDATA[Kepala Ruangan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="69" width="179" height="15" uuid="42830801-2499-48b6-8ab8-813d7f4f45b7"/>
+				<textElement>
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<text><![CDATA[(...................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="84" width="179" height="15" uuid="8df6f030-d3ff-4818-ace0-345902bcfb11"/>
+				<textElement>
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<text><![CDATA[Nip.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
